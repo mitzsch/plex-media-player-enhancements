@@ -85,3 +85,6 @@ Run ``QT_XCB_GL_INTEGRATION=xcb_egl plexmediaplayer``
 * _HDR passthrough support?_
 
 Might come in the future, when the Linux Kernel and mpv support HDR passthrough on X11, PlexMediaPlayer will probably support it aswell
+
+## Else
+libmpv enhancements ("Bump mpv to 1.2") were made by @LongChair
