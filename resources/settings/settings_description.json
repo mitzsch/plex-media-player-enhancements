@@ -1,0 +1,534 @@
+[
+  {
+    "section": "__meta__",
+    "version": 4
+  },
+  {
+    "section": "state",
+    "hidden": true,
+    "storage": true,
+    "values":[
+      {
+        "value": "geometry",
+        "default": "",
+        "hidden": true
+      }
+    ]
+  },
+  {
+    "section": "main",
+    "values": [
+      {
+        "value": "webMode",
+        "default": "desktop",
+        "hidden": true,
+        "platforms": [ "windows", "macosx" ],
+        "possible_values": [
+          [ "desktop", "desktop" ],
+          [ "tv", "tv" ]
+        ]
+      },
+      {
+        "value": "layout",
+        "default": "auto",
+        "hidden": false,
+        "possible_values": [
+          [ "auto", "auto" ],
+          [ "tv", "tv" ]
+        ]
+      },
+      {
+        "value": "remoteInspector",
+        "default": false,
+        "hidden": true
+      },
+      {
+        "value": "fullscreen",
+        "default": false,
+        "platforms_excluded": "oe"
+      },
+      {
+        "value": "minimizeOnDefocus",
+        "default": false,
+        "platforms": [ "windows" ],
+        "hidden": true
+      },
+      {
+        "value": "alwaysOnTop",
+        "default": false
+      },
+      {
+        "value": "webserverport",
+        "default": 32433,
+        "hidden": true
+      },
+      {
+        "value": "automaticUpdates",
+        "default": true
+      },
+      {
+        "value": "manualUpdateCheck",
+        "input_type": "button",
+        "default": true
+      },
+      {
+        "value": "updateChannel",
+        "default": 0,
+        "possible_values": [
+          [ 0, "Stable" ]
+        ]
+      },
+      {
+        "value": "hdmi_poweron",
+        "default": false,
+        "hidden": true,
+        "platforms": [ "oe_rpi" ]
+      },
+      {
+        "value": "disablemouse",
+        "default": false
+      },
+      {
+        "value": "logLevel",
+        "default": "debug",
+        "hidden": true,
+        "possible_values": [
+          [ "trace", "trace" ],
+          [ "debug", "debug" ],
+          [ "info", "info" ],
+          [ "warn", "warn" ],
+          [ "error", "error" ],
+          [ "fatal", "fatal" ],
+          [ "disable", "disable" ]
+        ]
+      },
+      {
+        "value": "useOpenGL",
+        // Warning: the default must be the same as the one in preinitQt().
+        "default": false,
+        "platforms": [ "windows" ]
+      },
+      {
+        "value": "clientUUID",
+        "default": "",
+        "hidden": true
+      },
+      {
+        "value": "showPowerOptions",
+        "default": true,
+        "hidden": true
+      },
+      {
+        "value": "useSystemVideoCodecs",
+        "default": [
+          {
+            "value": true,
+            // MMAL works just fine
+            "platforms": [ "oe" ]
+          },
+          {
+            "value": false
+          }
+        ],
+        "hidden": true
+      },
+      {
+        "value": "preventSystemScreensaver",
+        "default": false,
+        "hidden": true
+      },
+      {
+        "value": "useHelper",
+        "default": true,
+        "hidden": true
+      },
+      {
+        "value": "forceFSScreen",
+        "platforms_excluded": [ "oe" ],
+        "default": ""
+      },
+      {
+        "value": "forceAlwaysFS",
+        "default": false,
+        "hidden": true
+      },
+      {
+        "value": "sdlEnabled",
+        "default": true,
+        "hidden": true
+      }
+    ]
+  },
+  {
+    "section": "audio",
+    "values": [
+      {
+        "value": "devicetype",
+        "default": "basic",
+        "possible_values": [
+          [ "basic", "audio.basic" ],
+          [ "spdif", "audio.spdif" ],
+          [ "hdmi", "audio.hdmi" ]
+        ]
+      },
+      {
+        "value": "channels",
+        "default": [
+          {
+            "value": "auto",
+            "platforms": [ "osx" ]
+          },
+          {
+            "value": "2.0"
+          }
+        ],
+        "possible_values": [
+          [ "auto", "audio.auto" ],
+          [ "2.0", "audio.stereo" ],
+          [ "5.1,2.0", "audio.51" ],
+          [ "7.1,5.1,2.0", "audio.71" ]
+        ]
+      },
+      {
+        "value": "device",
+        "default": "auto"
+      },
+      {
+        "value": "normalize",
+        "default": true
+      },
+      {
+        "value": "exclusive",
+        "default": false,
+        "platforms": [ "osx", "windows" ]
+      },
+      {
+        "value": "passthrough.ac3",
+        "default": false
+      },
+      {
+        "value": "passthrough.dts",
+        "default": false
+      },
+      {
+        "value": "passthrough.eac3",
+        "default": false,
+        "platforms_excluded": [ "osx", "oe_rpi" ]
+      },
+      {
+        "value": "passthrough.dts-hd",
+        "default": false,
+        "platforms_excluded": [ "osx", "oe_rpi" ]
+      },
+      {
+        "value": "passthrough.truehd",
+        "default": false,
+        "platforms_excluded": [ "osx", "oe_rpi" ]
+      }
+    ]
+  },
+  {
+    "section": "video",
+    "values": [
+      {
+        "value": "debug.force_vo",
+        "default": "",
+        "hidden": true
+      },
+      {
+        "value": "refreshrate.auto_switch",
+        "default": false
+      },
+      {
+        "value": "refreshrate.delay",
+        "default": 3,
+        "hidden": true
+      },
+      {
+        "value": "refreshrate.avoid_25hz_30hz",
+        "default": true,
+        "hidden": true
+      },
+      {
+        "value": "hardwareDecoding",
+        "default": [
+          {
+            "value": "enabled",
+            "platforms": [ "oe" ]
+          },
+          {
+            "value": "disabled"
+          }
+        ],
+        "possible_values": [
+          [ "enabled", "video.decode.enabled", { "platforms_excluded": "osx" } ],
+          [ "enabled", "video.decode.enabled.modern", { "platforms": "osx" } ],
+          [ "osx_compat", "video.decode.enabled.old", { "platforms": "osx" } ],
+          [ "copy", "video.decode.copy" ],
+          [ "disabled", "video.decode.disabled" ]
+        ],
+        "platforms_excluded": "oe_rpi"
+      },
+      {
+        "value": "deinterlace",
+        "default": false,
+        "platforms_excluded": "oe_rpi"
+      },
+      {
+        "value": "directPlay",
+        "default": true
+      },
+      {
+        "value": "directStream",
+        "default": true
+      },
+      {
+        "value": "sync_mode",
+        "default": "audio",
+        "possible_values": [
+          [ "audio", "video.sync.audio" ],
+          [ "display-resample", "video.sync.resample" ],
+          [ "display-adrop", "video.sync.adrop" ]
+        ]
+      },
+      {
+        "value": "audio_delay.normal",
+        "default": 0,
+        "hidden": true,
+        "possible_range": {
+          "min": -300,
+          "max": 300,
+          "step": 50
+        }
+      },
+      {
+        "value": "audio_delay.24hz",
+        "default": 0,
+        "hidden": true,
+        "possible_range": {
+          "min": -300,
+          "max": 300,
+          "step": 50
+        }
+      },
+      {
+        "value": "audio_delay.25hz",
+        "default": 0,
+        "hidden": true,
+        "possible_range": {
+          "min": -300,
+          "max": 300,
+          "step": 50
+        }
+      },
+	  {
+        "value": "audio_delay.30hz",
+        "default": 0,
+        "hidden": true,
+        "possible_range": {
+          "min": -300,
+          "max": 300,
+          "step": 50
+        }
+      },
+      {
+        "value": "audio_delay.50hz",
+        "default": 0,
+        "hidden": true,
+        "possible_range": {
+          "min": -300,
+          "max": 300,
+          "step": 50
+        }
+      },
+      {
+        "value": "cache",
+        "default": 75,
+        "possible_values": [
+          [ 10, "video.cache.tiny" ],
+          [ 75, "video.cache.default" ],
+          [ 150, "video.cache.large", { "platforms_excluded": "oe_rpi" } ],
+          [ 500, "video.cache.vlarge", { "platforms_excluded": "oe_rpi" } ]
+        ]
+      },
+      {
+        "value": "aspect",
+        "default": "normal",
+        "possible_values": [
+          [ "normal", "video.aspect.normal" ],
+          [ "zoom", "video.aspect.zoom" ],
+          [ "force_4_3", "video.aspect.force43" ],
+          [ "force_16_9", "video.aspect.force169" ],
+          [ "force_16_9_if_4_3", "video.aspect.force169if43" ],
+          [ "stretch", "video.aspect.stretch" ],
+          [ "noscaling", "video.aspect.noscale" ],
+          [ "custom", "video.aspect.custom" ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "subtitles",
+    "values": [
+      {
+        "value": "placement",
+        "default": "center,bottom",
+        "possible_values": [
+          [ "left,bottom", "subtitles.leftBottom" ],
+          [ "right,bottom", "subtitles.rightBottom" ],
+          [ "center,bottom", "subtitles.centerBottom" ],
+          [ "left,top", "subtitles.leftTop" ],
+          [ "right,top", "subtitles.rightTop" ],
+          [ "center,top", "subtitles.centerTop" ]
+        ]
+      },
+      {
+        "value": "color",
+        "default": "#EEEEEE,#000000",
+        "possible_values": [
+          [ "#EEEEEE,#000000", "subtitles.lightGrey" ],
+          [ "#CCCCCC,#000000", "subtitles.blendedLightGrey" ],
+          [ "#FBF93E,#000000", "subtitles.yellow" ],
+          [ "#FFFFCC,#000000", "subtitles.lightYellow" ],
+          [ "#EEEDB8,#000000", "subtitles.blendedLightYellow" ],
+          [ "#FFFFFF,#000000", "subtitles.blackWhite" ]
+        ]
+      },
+      {
+        "value": "size",
+        "default": 32,
+        "possible_values": [
+          [ 18, "subtitles.tiny" ],
+          [ 24, "subtitles.small" ],
+          [ 32, "subtitles.normal" ],
+          [ 42, "subtitles.large" ],
+          [ 60, "subtitles.huge" ]
+        ]
+      }
+    ]
+  },
+  {
+    "section": "manualServers",
+    "values": [
+      {
+        "value": "ip1",
+        "default": "",
+        "input_type": "ip"
+      },
+      {
+        "value": "port1",
+        "default": "32400",
+        "input_type": "port"
+      },
+      {
+        "value": "ip2",
+        "default": "",
+        "input_type": "ip"
+      },
+      {
+        "value": "port2",
+        "default": "32400",
+        "input_type": "port"
+      }
+    ]
+  },
+  {
+    "section": "path",
+    "hidden": true,
+    "values": [
+      {
+        "value": "startupurl_tv",
+        "default": "bundled"
+      },
+      {
+        "value": "startupurl_desktop",
+        "default": "bundled"
+      },
+      {
+        "value": "helperprogram",
+        "default": ""
+      }
+    ]
+  },
+  {
+    "section": "cec",
+    "hidden": true,
+    "values": [
+      {
+        "value": "hdmiport",
+        "default": 0
+      },
+      {
+        "value": "verbose_logging",
+        "default": false
+      },
+      {
+        "value": "enable",
+        "default": true
+      },
+      {
+        "value": "suspendonstandby",
+        "default": false
+      },
+      {
+        "value": "poweroffonstandby",
+        "default": false
+      },
+      {
+        "value": "activatesource",
+        "default": true
+      },
+      {
+        "value": "usekeyupdown",
+        "default": false
+      }
+    ]
+  },
+  {
+    "section": "appleremote",
+    "hidden": true,
+    "values": [
+      {
+        "value": "emulatepht",
+        "default": true
+      }
+    ]
+  },
+  {
+    "section": "webclient",
+    "hidden": true,
+    "storage": true,
+    "values": []
+  },
+  {
+    "section": "system",
+    "values": [
+        {
+          "value": "systemname",
+          "default": "PlexMediaPlayer",
+          "hidden": true,
+          "platforms": [ "oe" ]
+        },
+        {
+          "value": "lircd_enabled",
+          "default": false,
+          "platforms": [ "oe" ]
+        },
+        {
+          "value": "smbd_enabled",
+          "default": false,
+          "platforms": [ "oe" ]
+        },
+        {
+          "value": "sshd_enabled",
+          "default": false,
+          "platforms": [ "oe" ]
+        }
+    ]
+  },
+  {
+    "section": "privacy",
+    "hidden": false,
+    "values": []
+  }
+]
