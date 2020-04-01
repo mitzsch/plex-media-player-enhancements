@@ -1,4 +1,13 @@
 # plex-media-player-enhancements
+Enhancements to the "Next generation Plex Desktop/Embedded Client"
+
+## Enhancements
+* ``Switched to vo=libmpv``
+* ``Prevent PMP switch to 100hz  - when playing back 25 or 50 fps movies``
+* ``Updated mpv commands to remove some mpv deprecated flags``
+* ``Added more stats to the video overlay``
+
+
 ## Building on Linux
 
 Plex Media Player officially requires Qt 5.9.5. Our users have indicated that Qt 5.10 and Qt 5.11 also builds correctly. However, Qt 5.11.0 and 5.11.1 versions are _incompatible_ and should be avoided. Qt 5.12 may work for you. Please consider building PMP within a dedicated VM or Docker container if your system has a Qt version installed newer than 5.9.5. Downgrading a system Qt will cause issues in other applications depending on a newer Qt version.
