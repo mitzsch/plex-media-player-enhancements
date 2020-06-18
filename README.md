@@ -79,7 +79,7 @@ Sometimes, PMP will pick up SDL 1.x libraries. This is not supported and will le
 
 ## Advices 
 
-* If you like to run PlexMediaPlayer on a 4K TV you should use Qt 5.12.4 instead of the Qt 5.9.5 or Qt 5.11.3. This prevents UI glitches and especially glitches in the settings menu.
+* If you like to run PlexMediaPlayer on a 4K TV you should use Qt 5.12.X instead of Qt 5.9.5 or Qt 5.11.3. This prevents UI glitches and especially glitches in the settings menu.
 
 * Disable the PMPHelper as it has no function under Linux and causes some issues when shutting down the system (A process for ... is running)  -> Add ``-DENABLE_HELPER=off`` to the ``cmake`` line
 
