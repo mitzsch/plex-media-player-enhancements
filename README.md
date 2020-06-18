@@ -6,7 +6,7 @@ Enhancements to the "Next generation Plex Desktop/Embedded Client"
 * ``Prevent PMP switch to 100hz  - when playing back 25 or 50 fps movies``
 * ``Updated mpv commands to remove some mpv deprecated flags``
 * ``Added more stats to the video overlay``
-* ``Added audio delay setting for 30 Hz``
+* ``Added audio delay setting for 30Hz``
 
 
 ## Building on Linux
