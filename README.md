@@ -13,7 +13,7 @@ Enhancements to the "Next generation Plex Desktop/Embedded Client"
 
 Plex Media Player officially requires Qt 5.9.5. Our users have indicated that Qt 5.10 and Qt 5.11 also builds correctly. However, Qt 5.11.0 and 5.11.1 versions are _incompatible_ and should be avoided. Qt 5.12 may work for you. Please consider building PMP within a dedicated VM or Docker container if your system has a Qt version installed newer than 5.9.5. Downgrading a system Qt will cause issues in other applications depending on a newer Qt version.
 
-These instructions are for Ubuntu 16.04 LTS and up. They were tested on a fresh install without extra options and with auto-updates applied.
+These instructions are for Ubuntu 20.04 LTS and up. They were tested on a fresh install without extra options and with auto-updates applied.
 
 First, some preparations:
 
