@@ -1464,8 +1464,8 @@ QString PlayerComponent::videoInformation() const
                                   !MPV_PROPERTY_BOOL("partially-seekable"))
                                  ? "yes" : "no") << endl;
   info << endl;
-  info << "Base Info:" << endl;
-  info << "MPV version: " << MPV_PROPERTY("mpv-version") << endl;
+  info << "Base Version:" << endl;
+  info << "MPV: " << MPV_PROPERTY("mpv-version") << endl;
   info << "FFmpeg: " << MPV_PROPERTY("ffmpeg-version") << endl;
   info << endl;
   info << "Video:" << endl;
