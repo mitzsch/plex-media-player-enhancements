@@ -1188,7 +1188,7 @@ void PlayerComponent::updateVideoSettings()
 
 #ifndef TARGET_RPI
   double displayFps = DisplayComponent::Get().currentRefreshRate();
-  mpv::qt::set_property(m_mpv, "display-fps", displayFps);
+  mpv::qt::set_property(m_mpv, "override-display-fps", displayFps);
 #endif
 
   setAudioDelay(m_playbackAudioDelay);
@@ -1477,7 +1477,7 @@ QString PlayerComponent::videoInformation() const
   info << "Primaries: " << MPV_PROPERTY("video-params/primaries") << endl;
   info << "Gamma: " << MPV_PROPERTY("video-params/gamma") << endl;
   info << "Levels: " << MPV_PROPERTY("video-params/colorlevels") << endl; 
-  info << "Aspect: " << MPV_PROPERTY("video-aspect") << endl;
+  info << "Aspect: " << MPV_PROPERTY("video-params/aspect") << endl;
   info << "Bitrate: " << MPV_PROPERTY("video-bitrate") << endl;
   double displayFps = DisplayComponent::Get().currentRefreshRate();
   info << "Display FPS: " << MPV_PROPERTY("display-fps")
