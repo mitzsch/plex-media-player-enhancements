@@ -7,6 +7,7 @@ Enhancements to the "Next generation Plex Desktop/Embedded Client"
 * ``Updated mpv commands to remove some mpv deprecated flags``
 * ``Added more stats to the video overlay``
 * ``Added audio delay setting for 30Hz``
+* ``Enable gpu for the gui``
 
 
 ## Building on Linux
