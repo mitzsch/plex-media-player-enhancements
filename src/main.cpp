@@ -85,7 +85,7 @@ void ShowLicenseInfo()
 
 /////////////////////////////////////////////////////////////////////////////////////////
 QStringList g_qtFlags = {
-  "--disable-gpu",
+  "--enable-gpu-rasterization",
   "--disable-web-security"
 };
 
